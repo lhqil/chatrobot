@@ -1,0 +1,7 @@
+启动项目的时候会解析mapper.xml文件，xml中有一个命名空间指向dao，
+用动态代理和反射技术会生成一个dao层的实现类。dao层用来操作数据库，返回数据，service调用dao层获取的数据，
+根据具体的业务做一些处理，controller层调用service层，一般用来接收前台传来的数据，
+再将从service层获取的数据传给前台。
+
+
+ <context:component-scan base-package="com.chatRobot.controller"/>

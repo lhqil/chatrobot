@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="helloworld" class="HelloWorld">
+
+</bean>
+
+
+
+<bean id="people" class="day3.People">
+    <property name="id" value="1"></property>
+    <property name="age" value="12"></property>
+    <property name="name" value="lisi"></property>
+</bean>
+<bean id="abstractpeople" class="day3.People" abstract="true">
+    <property name="classname" value="高三5班" ></property>
+    <property name="age" value="22"></property>
+</bean>
+
+    <bean id="zhangsan2" parent="abstractpeople" class="day3.People">
+        <property name="id" value="1"></property>
+        <property name="name" value="zhangsan"></property>
+    </bean>
+ <bean id="lisi" class="day3.People">
+     <property name="id" value="2"></property>
+     <property name="name" value="lisi"></property>
+ </bean>
+
+</beans>
